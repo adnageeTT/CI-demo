@@ -1,8 +1,14 @@
 on: push
 
 jobs:
-  demo:
+  build-the-car:
     runs-on: ubuntu-latest
     steps:
-      - name: Print message
-        run: echo "Hello world - from a GitHub Action"
+      - name: Build the car
+        run: |
+          mkdir build
+          cd build
+          touch car.txt
+          echo "chassis" >> car.txt
+          echo "engine" >> car.txt
+          echo "wheels" >> car.txt
